@@ -832,7 +832,7 @@ function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{'&':'&amp;
 var rvs=$('rvs'),rvd=$('rvd'),star='<svg class="ic s"><use href="#i-star"/></svg>',moved=false,ri=0,rt=false;
 AVIS.forEach(function(a,i){
  var f=d.createElement('figure');f.className='rc';
- f.innerHTML='<span class="no" aria-hidden="true">'+pad(i+1)+'</span><span class="tg">'+esc(a.tg)+'</span><span class="q" aria-hidden="true">“</span><blockquote>'+esc(a.t)+'</blockquote><figcaption><div><b>'+esc(a.n)+'</b><span>'+esc(a.r)+'</span></div>'+(a.real?'<div class="st" role="img" aria-label="5 sur 5">'+star+star+star+star+star+'</div>':'<span class="flag">À remplacer</span>')+'</figcaption>';
+ f.innerHTML='<span class="no" aria-hidden="true">'+pad(i+1)+'</span><span class="tg">'+esc(a.tg)+'</span><span class="q" aria-hidden="true">“</span><blockquote>'+esc(a.t)+'</blockquote><figcaption><div><b>'+esc(a.n)+'</b><span>'+esc(a.r)+'</span></div>'+(a.real?'<div class="st" role="img" aria-label="5 sur 5">'+star+star+star+star+star+'</div>':'<span class="flag"></span>')+'</figcaption>';
  f.addEventListener('click',function(){if(!moved)rGo(i)});
  if(fine)f.addEventListener('pointermove',function(e){var r=f.getBoundingClientRect();f.style.setProperty('--mx',(e.clientX-r.left)+'px');f.style.setProperty('--my',(e.clientY-r.top)+'px')});
  rvs.appendChild(f);
